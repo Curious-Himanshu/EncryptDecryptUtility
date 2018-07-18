@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="577.0" style="-fx-background-color: #123456;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <Label text="ENCRYPTOR DECRYPTOR" textFill="#e6e9fc" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="30.0" right="40.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="MOVE" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+   </top>
+   <bottom>
+      <Pane prefHeight="237.0" prefWidth="577.0" style="-fx-background-color: #82B1FA;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="40.0" layoutY="14.0" prefHeight="41.0" prefWidth="106.0" text="ENTER  TEXT" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <Blend>
+                     <topInput>
+                        <Glow />
+                     </topInput>
+                  </Blend>
+               </effect>
+            </Label>
+            <TextField fx:id="txtVal" layoutX="40.0" layoutY="67.0" prefHeight="42.0" prefWidth="420.0">
+               <font>
+                  <Font name="Open Sans Regular" size="13.0" />
+               </font></TextField>
+            <Button fx:id="btnEncrypt" layoutX="40.0" layoutY="161.0" mnemonicParsing="false" onAction="#encryptFun" prefHeight="50.0" prefWidth="107.0" style="-fx-background-color: #123456; -fx-border-width: 1; -fx-border-color: #000000;" text="ENCRYPT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <effect>
+                  <Glow>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </Glow>
+               </effect>
+            </Button>
+            <Button fx:id="btnDecrypt" layoutX="197.0" layoutY="161.0" mnemonicParsing="false" onAction="#decryptFun" prefHeight="50.0" prefWidth="107.0" style="-fx-background-color: #123456; -fx-border-color: #000000; -fx-border-width: 1;" text="DECRYPT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="btnCopy" layoutX="478.0" layoutY="68.0" mnemonicParsing="false" onAction="#copyFun" prefHeight="33.0" prefWidth="73.0" style="-fx-background-color: #123456; -fx-border-color: #000000;" text="COPY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Label fx:id="lblMsg" layoutX="37.0" layoutY="132.0" prefHeight="16.0" prefWidth="234.0" textFill="#f23939">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnClear" layoutX="353.0" layoutY="161.0" mnemonicParsing="false" onAction="#clearFun" prefHeight="50.0" prefWidth="107.0" style="-fx-background-color: #123456; -fx-border-color: #000000; -fx-border-width: 1;" text="CLEAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
